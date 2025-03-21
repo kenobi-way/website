@@ -1,6 +1,6 @@
 # resources and docs for setting up my dev environment
 
-### SVELTE
+# SVELTE
 
 https://svelte.dev/tutorial/svelte/welcome-to-svelte
 
@@ -14,27 +14,28 @@ https://svelte.dev/tutorial/svelte/welcome-to-svelte
 <style> p { font-size: 2em; } </style>
 
 
-### GIT
+# GIT
 
-git --version
+Install GitHub CLI
+```
+brew install gh
+gh --version
 
-# generate SSH key
-# by default, the key will be saved in ~/.ssh/id_rsa.
+# Login to GitHub
+gh auth login
+```
 
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+generate SSH key
+by default, the key will be saved in ~/.ssh/id_rsa.
 
-# Add SSH Key to GitHub
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
-Go to GitHub SSH settings.
-Copy the contents of your public key (~/.ssh/id_rsa.pub).
-Add the key to GitHub by clicking New SSH key and pasting the contents.
+Add SSH Key to GitHub
+* Go to GitHub SSH settings.
+* Copy the contents of your public key (`~/.ssh/id_rsa.pub`).
+* Add the key to GitHub by clicking New SSH key and pasting the contents.
 
-# Test SSH Connection
+Test SSH Connection
 
-ssh -T git@github.com
+`ssh -T git@github.com`
 
-# Configure VSCode to Use Your Organization’s GitHub Account
-
-Open the Command Palette (Ctrl + Shift + P or Cmd + Shift + P on macOS).
-Type GitHub: Sign in and select it.
-Follow the prompts to sign in to your GitHub account (the organization’s account should be listed).
