@@ -3,17 +3,18 @@
 ## Plan
 
 1. setup my local dev environment on my MacBook Pro
-  - [Warp](https://www.warp.dev/) terminal
-  - homebrew, node / npm, bash, vscode with cursor, eslint, prettier
-    - Cursor IDE?
+   - [Warp](https://www.warp.dev/) terminal
+   - [Cursor IDE](https://www.cursor.com/) - built in terminal is nice
+
+   - homebrew, node / npm, bash, vscode with cursor, eslint, prettier
     - [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview#install-and-authenticate) ?
     - https://x.com/elie2222/status/1907768796900897077 - how to code with Cursor (maintain a project plan that the AI can read + update)    
-  - maintain a shell script to update/recreate the environment at will (idempotent)
+   - maintain a shell script to update/recreate the environment at will (idempotent)
 1. stand up a simple “hello world” static website locally
-    - with SvelteKit (with HMR), Tailwind (with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode)), Vite
+   - with SvelteKit (with HMR), Tailwind (with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode)), Vite
       - what drives this Vite / SvelteKit / ?
-    - Vercel Web Analytics, FormSubmit.co
-    - figure out the folder structure etc.
+   - Vercel Web Analytics, FormSubmit.co
+   - figure out the folder structure etc.
 1. get the starter website into a github repo
     - and get on a feature branch
 1. test and refine the local dev/test loop
