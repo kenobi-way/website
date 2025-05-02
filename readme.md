@@ -30,8 +30,11 @@ Preview production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
-1. Vite
-1. Tailwind (with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode))
+1. Vite - built into SveltKit projects by default
+1. [install](https://tailwindcss.com/docs/installation/framework-guides/sveltekit) Tailwind (with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode))
+1. Deploy as a Vercel serverless app, prerendered with static site generation -- see the [project types](https://svelte.dev/docs/kit/project-types)
+
+
 1. stand up a simple “hello world” static website locally
    - with 
    - Vercel Web Analytics, FormSubmit.co
