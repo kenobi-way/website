@@ -1,18 +1,39 @@
-# Dev env, toolchain, tool tips
+# Project Guide & Plan
 
-## Plan
+## Plan - simple website
 
-1. setup my local dev environment on my MacBook Pro
+### Setup local dev environment
    - [Warp](https://www.warp.dev/) terminal
-   - [Cursor IDE](https://www.cursor.com/) - built in terminal is nice
+   - [Cursor IDE](https://www.cursor.com/)
+      - built in terminal is nice... need to install brew, npm etc. again here
 
-   - homebrew, node / npm, bash, vscode with cursor, eslint, prettier
-    - [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview#install-and-authenticate) ?
-    - https://x.com/elie2222/status/1907768796900897077 - how to code with Cursor (maintain a project plan that the AI can read + update)    
-   - maintain a shell script to update/recreate the environment at will (idempotent)
+### SvelteKite
+   - with [client side routing](https://svelte.dev/docs/kit/glossary#Routing), [service workers](https://svelte.dev/docs/kit/service-workers) for offline support, [preloading](https://svelte.dev/docs/kit/link-options#data-sveltekit-preload-data) pages for faster nav & responsiveness, [configurable page rendering](https://svelte.dev/docs/kit/link-options#data-sveltekit-preload-data) with server-side / client-side / pre-rendered options, and instant code updates via HMR (hot module replacement) with Vite
+   - [`sv`](https://github.com/sveltejs/cli) CLI
+   - `npm` for updates & dependencies, `eslint` is the standard linter
+
+#### dev mode
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+#### building prod
+
+```bash
+npm run build
+```
+
+Preview production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+1. Vite
+1. Tailwind (with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode))
 1. stand up a simple “hello world” static website locally
-   - with SvelteKit (with HMR), Tailwind (with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode)), Vite
-      - what drives this Vite / SvelteKit / ?
+   - with 
    - Vercel Web Analytics, FormSubmit.co
    - figure out the folder structure etc.
 1. get the starter website into a github repo
@@ -28,6 +49,11 @@
 1. redirect the domain name I have reserved to the new site
 1. setup analytics (vercel? google analytics?)
 1. setup site monitoring / alerts
+1. to consider
+   - homebrew, node / npm, bash, eslint, prettier
+    - [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview#install-and-authenticate) ?
+    - https://x.com/elie2222/status/1907768796900897077 - how to code with Cursor (maintain a project plan that the AI can read + update)    
+   - maintain a shell script to update/recreate the environment at will (idempotent)
 
 ## GIT
 
