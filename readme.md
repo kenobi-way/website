@@ -53,7 +53,6 @@ Deploy as a Vercel serverless app, prerendered with static site generation—see
 
 ------
 
-1. stand up a simple “hello world” static website locally
 1. get the starter website into a github repo
     - and get on a feature branch
 1. test and refine the local dev/test loop
