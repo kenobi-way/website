@@ -1,13 +1,14 @@
 # Project Guide & Plan
 
-## Plan - simple website
-
-### Setup local dev environment
-   - [Warp](https://www.warp.dev/) terminal
+## Dev environment + tools
    - [Cursor IDE](https://www.cursor.com/)
       - built in terminal is nice... need to install brew, npm etc. again here
+   - [Warp](https://www.warp.dev/) terminal
 
-### SvelteKite
+## SvelteKit
+
+https://svelte.dev/docs/kit/introduction
+
    - with [client side routing](https://svelte.dev/docs/kit/glossary#Routing), [service workers](https://svelte.dev/docs/kit/service-workers) for offline support, [preloading](https://svelte.dev/docs/kit/link-options#data-sveltekit-preload-data) pages for faster nav & responsiveness, [configurable page rendering](https://svelte.dev/docs/kit/link-options#data-sveltekit-preload-data) with server-side / client-side / pre-rendered options, and instant code updates via HMR (hot module replacement) with Vite
    - [`sv`](https://github.com/sveltejs/cli) CLI
    - `npm` for updates & dependencies, `eslint` is the standard linter
@@ -20,25 +21,39 @@ npm run dev
 npm run dev -- --open
 ```
 
-#### building prod
-
+#### build prod
 ```bash
 npm run build
+
+# preview production build
+npm run preview
 ```
 
-Preview production build with `npm run preview`.
+## Vite
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+built into SveltKit projects by default
 
-1. Vite - built into SveltKit projects by default
-1. [install](https://tailwindcss.com/docs/installation/framework-guides/sveltekit) Tailwind (with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode))
-1. Deploy as a Vercel serverless app, prerendered with static site generation -- see the [project types](https://svelte.dev/docs/kit/project-types)
+## Tailwind
 
+[install](https://tailwindcss.com/docs/installation/framework-guides/sveltekit) Tailwind (with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode))
+
+## Vercel
+
+https://vercel.com/nates-projects-f92fca23
+
+Deploy as a Vercel serverless app, prerendered with static site generation—see the [project types](https://svelte.dev/docs/kit/project-types)—with [automatic deployment](https://vercel.com/docs/git/vercel-for-github) on any github commit. Vercel features & optimizations to consider:
+* [ISR](https://vercel.com/docs/frameworks/sveltekit#incremental-static-regeneration-isr) - Incremental Site Regeneration allows you to create or update content without redeploying your site, for better performance, improved security, and faster build times (sveltekit [docs](https://svelte.dev/docs/kit/adapter-vercel)
+* [Deployment Configuration](https://svelte.dev/docs/kit/adapter-vercel#Deployment-configuration) - deploy as Edge or Serverless [Functions](https://vercel.com/docs/functions)
+* [Image Optimization](https://vercel.com/docs/image-optimization/quickstart)
+* [Fluid Compute](https://vercel.com/docs/functions/fluid-compute) - blend of serverless flexibility and server-like capabilities
+* [Skew Protection](https://vercel.com/docs/skew-protection) - ensures that the client and server stay in sync
+
+* use a faster/alternative package manager - pnpm, bun, yarn
+* turn on caching
+
+------
 
 1. stand up a simple “hello world” static website locally
-   - with 
-   - Vercel Web Analytics, FormSubmit.co
-   - figure out the folder structure etc.
 1. get the starter website into a github repo
     - and get on a feature branch
 1. test and refine the local dev/test loop
@@ -51,6 +66,7 @@ Preview production build with `npm run preview`.
     - collect interest via a very simple form — via FormSubmit or a simple serverless backend (could email me or add to a google sheet)
 1. redirect the domain name I have reserved to the new site
 1. setup analytics (vercel? google analytics?)
+   - Vercel Web Analytics
 1. setup site monitoring / alerts
 1. to consider
    - homebrew, node / npm, bash, eslint, prettier
